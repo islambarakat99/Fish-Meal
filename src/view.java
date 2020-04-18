@@ -29,7 +29,7 @@ public class view extends JFrame{
 		Shark = new JPanel();
 		Shark.setLayout(new BorderLayout());
 		Shark.setBackground(new Color(0,128,255));
-		/*BufferedImage myPicture = null;
+		BufferedImage myPicture = null;
 		
 		try {
 			myPicture = ImageIO.read(new File("sea.png"));
@@ -38,7 +38,7 @@ public class view extends JFrame{
 		}
 		JLabel picLabel = new JLabel(new ImageIcon(myPicture));
 		Shark.add(picLabel);
-		*/
+		
 
 		Shark.setPreferredSize(new Dimension(1920, 1040));
 		setLayout(new BorderLayout());
