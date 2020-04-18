@@ -29,6 +29,7 @@ public class view extends JFrame{
 		Shark = new JPanel();
 		Shark.setLayout(new BorderLayout());
 		Shark.setBackground(new Color(0,128,255));
+		
 		BufferedImage myPicture = null;
 		
 		try {
@@ -62,26 +63,5 @@ class background extends JComponent{
 	
 	public void paint(Graphics g){
 		
-	}
-	
-	
+	}	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
