@@ -134,9 +134,7 @@ public class GUI extends JComponent{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		 
 	}
-	
 	public void shark(Graphics g){
 		
 		int x,y;
@@ -145,9 +143,6 @@ public class GUI extends JComponent{
 		
         int sharkW = 311; // the size of the picture of the Shark
         int sharkH = 200;
-        
-        
-		
 		if(eating){
 			x=goX-sharkW;
 			y=goY-(sharkH/2);
@@ -197,46 +192,31 @@ public class GUI extends JComponent{
 	}
 	
 	public void fishTwo(Graphics g){
-		int x,y;
-				
-		
-		int w = getWidth();// the size of the Screen here
+		int x,y;			
+	int w = getWidth();// the size of the Screen here
         int h = getHeight();
-        
         int fishW = 150; // the size of the picture of the Shark
         int fishH = 150;
-        
         x= fishes[1][0]+2;
-		y= fishes[1][1];
-		
-		
-		
-		if (x > w + (fishW/2)) {
-			x = -fishW/2;
-		}
-		if(!isEaten[1]){
-			g.drawImage(fishesI[1], x, y, this);
-		}
-		
-		fishes[1][0]=x;
-		fishes[1][1]=y;
+	y= fishes[1][1];
+	if (x > w + (fishW/2)) {
+		x = -fishW/2;
 	}
-
+	if(!isEaten[1]){
+		g.drawImage(fishesI[1], x, y, this);
+	}
+	fishes[1][0]=x;
+	fishes[1][1]=y;
+	}
 	public void fishThree(Graphics g){
-		int x,y;
-				
-		
+	  int x,y;
 		int w = getWidth();// the size of the Screen here
-        int h = getHeight();
-        
+       	        int h = getHeight();       
         int fishW = 150; // the size of the picture of the Shark
         int fishH = 150;
         
         x= fishes[2][0]+2;
-		y= fishes[2][1];
-		
-		
-		
+		y= fishes[2][1];	
 		if (x > w + (fishW/2)) {
 			x = -fishW/2;
 		}
@@ -247,16 +227,12 @@ public class GUI extends JComponent{
 		fishes[2][0]=x;
 		fishes[2][1]=y;
 	}
-	
 	public void eat(){
-		
 		for(int i=0;i<3;i++){
 			if(((fishes[i][0]+150)-sharkX)<=461&&((fishes[i][1]+200)-sharkY)<=350&&((fishes[i][0]+311)-sharkX)>0&&((fishes[i][1]+200)-sharkY)>0)
-				isEaten[i]=true;
-			
+				isEaten[i]=true;		
 		}
 	}
-	
 	public static void main(String[]args){
 		GUI g = new GUI();
 	}
